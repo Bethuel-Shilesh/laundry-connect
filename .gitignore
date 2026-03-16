@@ -1,0 +1,16 @@
+ # Virtual environment
+backend/laun/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Node modules
+node_modules/
