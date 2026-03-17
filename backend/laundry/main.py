@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from laundry.database import engine, Base
 from laundry.models import User, Shop, Service, Order, Review, Payment
-from laundry.routes import auth, shop
+from laundry.routes import auth, shop, order
 
 Base.metadata.create_all(bind=engine)
 
@@ -22,6 +22,7 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(shop.router)
+app.include_router(order.router)
 
 @app.get("/")
 def root():
