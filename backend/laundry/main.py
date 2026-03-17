@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from laundry.database import engine, Base
 from laundry.models import User, Shop, Service, Order, Review, Payment
-from laundry.routes import auth, shop, order
+from laundry.routes import auth, shop, order, service, review, payment
 
 Base.metadata.create_all(bind=engine)
 
@@ -23,7 +23,11 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(shop.router)
 app.include_router(order.router)
+app.include_router(service.router)
+app.include_router(review.router)
+app.include_router(payment.router)
 
 @app.get("/")
 def root():
     return {"message": "Welcome to Laundry Connect API!"}
+
