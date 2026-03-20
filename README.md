@@ -1,8 +1,14 @@
 # 🧺 Laundry Connect  
 ### 🚀 Your Laundry, Our Priority  
 
-A **full-stack smart laundry marketplace** that seamlessly connects customers with nearby laundry service providers.  
-Users can discover, book, and track laundry services, while shop owners and admins manage operations through dedicated dashboards.
+A **full-stack smart laundry marketplace** that connects customers with nearby laundry service providers.  
+Customers can discover, book, and track laundry orders, while shop owners manage their business through a dedicated dashboard.  
+Admins oversee the platform with analytics, approvals, and system-wide controls.
+
+---
+
+## 🚧 Project Status: Work in Progress
+This project is actively being developed. Core backend functionalities are completed, and frontend + deployment are in progress.
 
 ---
 
@@ -23,20 +29,20 @@ Users can discover, book, and track laundry services, while shop owners and admi
 ## ✨ Features
 
 ### 👤 Customers
-- 🔍 Discover nearby laundry services  
-- 📦 Book orders with pickup & delivery scheduling  
-- 📊 Track order status *(Pending → Washing → Delivered)*  
-- ⭐ Rate and review services  
+- 🔍 Search and browse nearby laundry shops  
+- 📦 Book services with pickup & delivery scheduling  
+- 📊 Track orders *(Pending → Washing → Delivered)*  
+- ⭐ Leave ratings and reviews  
 
 ### 🏪 Shop Owners
-- 📝 Register and manage laundry services  
-- 💰 Set pricing and handle incoming orders  
-- 📈 Monitor revenue and performance analytics  
+- 📝 Register and manage services with pricing  
+- 📥 Accept and update incoming orders  
+- 📈 View revenue and order statistics  
 
 ### 👑 Admin Panel
 - ✅ Approve or reject shop registrations  
-- 👥 Manage users and platform activity  
-- 📊 View system-wide analytics and insights  
+- 👥 Manage platform users  
+- 📊 Monitor platform analytics and insights  
 
 ---
 
@@ -47,7 +53,7 @@ Users can discover, book, and track laundry services, while shop owners and admi
 
 ## 🔌 API Endpoints
 
-### 🔐 Auth
+### 🔐 Authentication
 - `POST /auth/register`
 - `POST /auth/login`
 
