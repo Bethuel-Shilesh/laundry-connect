@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthProvider } from './context/AuthContext';
+
+import Landing from './pages/Landing';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Shops from './pages/Shops';
+import ShopDetails from './pages/ShopDetails';
+import OrderTracking from './pages/OrderTracking';
+import OwnerDashboard from './pages/OwnerDashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <ToastContainer position="top-right" autoClose={3000} />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/shops" element={<Shops />} />
+          <Route path="/shops/:id" element={<ShopDetails />} />
+          <Route path="/orders" element={<OrderTracking />} />
+          <Route path="/owner/dashboard" element={<OwnerDashboard />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
 }
 
