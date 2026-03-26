@@ -24,12 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/shops" element={<Shops />} />
-          <Route path="/shops/:id" element={<ShopDetails />} />
-          <Route path="/orders" element={<OrderTracking />} />
-          <Route path="/owner/dashboard" element={<OwnerDashboard />} />
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          
         </Routes>
         <Footer />
       </Router>
